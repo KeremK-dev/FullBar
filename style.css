@@ -1,0 +1,200 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(135deg, rgba(0,5,255,1) 0%, rgba(255,0,159,1) 100%);
+  flex-direction:column;
+}
+
+.blg{
+  margin: 5px;
+  height: 250px;
+  width: 150px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+}
+#d1{
+  display: flex;
+  flex-direction: row;
+}
+
+#s_kab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.sayac {
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  transition: .2s ease;
+  font-size: 30px;
+}
+
+.text {
+  font-size: 1.2em;
+  color: white;
+  z-index: 1;
+}
+
+.sayac::before {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 260%;
+  background-image: linear-gradient(135deg, rgba(255,0,159,1) 0%,  rgba(0,5,255,1) 100%);
+}
+
+.sayac::after {
+  position: absolute;
+  content: '';
+  width: 88%;
+  height: 80%;
+  border-width: 0;
+  border-radius: 1.2em;
+  background-color: black;
+  opacity: .7;
+  transition: 100ms ease;
+}
+
+.sayac:hover.sayac {
+  transform: scale(1.1);
+}
+
+.sayac:hover.sayac::after {
+  opacity: .5;
+}
+
+.sayac:hover.sayac::before {
+  animation: turn_4810 .4s infinite linear;
+}
+
+.sayac:active.sayac {
+  transform: scale(1.05);
+}
+
+.sayac:active.sayac::before {
+  transform: scale(1.05);
+  animation: turn_4810 .2s infinite linear;
+}
+
+@keyframes turn_4810 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.btn {
+  margin: 5px;
+  height: 40px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1em 2em;
+  font-size: 15px;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  transition: .2s ease;
+}
+
+.text {
+  font-size: 1.2em;
+  color: white;
+  z-index: 1;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 260%;
+  background-image: linear-gradient(135deg, rgba(255,0,159,1) 0%,  rgba(0,5,255,1) 100%);
+}
+
+.btn::after {
+  position: absolute;
+  content: '';
+  width: 88%;
+  height: 80%;
+  border-width: 0;
+  border-radius: 1.2em;
+  background-color: black;
+  opacity: .7;
+  transition: 100ms ease;
+}
+
+.btn:hover.btn {
+  transform: scale(1.1);
+}
+
+.btn:hover.btn::after {
+  opacity: .5;
+}
+
+.btn:hover.btn::before {
+  animation: turn_4810 .4s infinite linear;
+}
+
+.btn:active.btn {
+  transform: scale(1.05);
+}
+
+.btn:active.btn::before {
+  transform: scale(1.05);
+  animation: turn_4810 .2s infinite linear;
+}
+
+@keyframes turn_4810 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#game{
+  height: 250px;
+  width: 400px;
+  border: 5px double black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#pembe,#mavi{
+  height:50px;
+  width: 200px;
+}
+#pembe{
+  background-color: rgba(255,0,159,1);
+  border-left: 5px solid #000;
+}
+#mavi{
+  background-color: rgba(0,5,255,1);
+  border-right: 5px solid #000;
+}
